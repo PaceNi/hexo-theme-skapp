@@ -22,7 +22,7 @@ body {
 
         .mini-article__cover {
             &::before {
-                background-color: rgba(30, 200, 252, 0.9);
+                background-color: rgba(30, 200, 252, 0.3);
             }
 
             & > a {
@@ -54,7 +54,8 @@ body {
 
     & > img {
         display: block;
-        width: 100%;
+        min-width: 100%;
+        height: 100%;
     }
 
     & > a {

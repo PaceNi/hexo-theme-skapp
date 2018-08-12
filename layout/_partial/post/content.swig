@@ -11,7 +11,7 @@
                 <i class="mark__icon iconfont icon-write"></i>
                 <ul class="mark__list clearfix">
                     <li class="mark__item">
-                        <a href="{{ url_for(page.author.link || '') }}">{{ page.author.nick|default(get_setting(author.name)) }}</a>
+                        {{ page.author.nick|default(get_setting('default_author_name')) }}
                     </li>
                 </ul>
             </div>
@@ -48,7 +48,7 @@
     <div class="post__content">
         {{ render(page.content) }}
 
-        {% if page.editor %}
+        {# {% if page.editor %}
         <div class="post-announce">
             {{ __('copyright_statement.one') }}
             <a href="{{ page.editor.link }}">{{ page.editor.name }}</a> {{ __('copyright_statement.two') }}：{{ page.editor.name }}（<a href="{{ page.editor.link }}">{{ page.editor.link }}</a>）
@@ -59,7 +59,7 @@
             <a href="{{ config.url }}">{{ get_setting('title') }}</a>
             {{ __('copyright_statement.four') }}：{{ get_setting('title') }}（<a href="{{ config.url }}{{ url_for(page.path) }}">{{ config.url }}{{ url_for(page.path) }}</a>）
         </div>
-        {% endif %}
+        {% endif %} #}
 
         <div class="post__prevs">
             <div class="post__prev">

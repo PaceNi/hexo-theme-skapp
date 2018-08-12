@@ -3,7 +3,6 @@
         <div class="content__container">
             {{ render(page.content) }}
         </div>
-
         <div id="comment-container"></div>
     </div>
 </main>
