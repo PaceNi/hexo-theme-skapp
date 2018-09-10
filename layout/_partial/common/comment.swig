@@ -38,3 +38,26 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {% endif %}
+
+{% if page.comments && config.valine.enable %}
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <script type="text/javascript">
+        var GUEST = ['nick','mail','link'];
+        var guest = '{{ config.valine.guest_info }}';
+        guest = guest.split(',').filter(item=>{
+            return GUEST.indexOf(item)>-1;
+        });
+        new Valine({
+            el: '#comment-container' ,
+            verify: {{ config.valine.verify }},
+            notify: {{ config.valine.notify }},
+            appId: '{{ config.valine.appid }}',
+            appKey: '{{ config.valine.appkey }}',
+            placeholder: '{{ config.valine.placeholder }}',
+            avatar:'{{ config.valine.avatar }}',
+            guest_info:guest,
+            pageSize:'{{ config.valine.pageSize }}' || 10,
+        });
+    </script>
+{% endif %}
