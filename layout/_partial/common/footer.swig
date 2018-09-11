@@ -65,4 +65,12 @@
             </ul>
         </div>
     </section>
+    {% if config.mermaid.enable %}
+        <script src='https://unpkg.com/mermaid@{{ config.mermaid.version }}/dist/mermaid.min.js'></script>
+        <script>
+            if (window.mermaid) {
+            mermaid.initialize({{ JSON.stringify(config.mermaid.options) }});
+            }
+        </script>
+    {% endif %}
 </footer>

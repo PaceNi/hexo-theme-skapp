@@ -8,9 +8,8 @@
         {% if page.comments && config.disqus_shortname %}
             <div id="disqus_thread"></div>
         {% endif %}
-        {% if config.valine.enable %}
-            <div id="comment-container">
-            </div>
+        {% if page.comments && config.valine.enable %}
+            <div id="comment-container"></div>
         {% endif %}
     </div>
 
