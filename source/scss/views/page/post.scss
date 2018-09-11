@@ -11,6 +11,29 @@ body {
 
 .page__content {
   overflow: hidden;
+  #share {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    .-mob-share-list {
+      span {
+        display: inline-block;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+      }
+      span.-mob-share-weixin {
+        background: url(http://f1.webshare.mob.com/code/res/icon/sns_icon_22@2x_b.png)
+          no-repeat;
+        background-size: 100%;
+      }
+      span.-mob-share-qq {
+        background: url(http://f1.webshare.mob.com/code/res/icon/sns_icon_24@2x_b.png)
+          no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
 }
 
 .post__cover {
@@ -91,7 +114,7 @@ body {
     font-weight: bold;
     padding-top: 10px;
     border-top: 1px dashed #ddd;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .post__prev {
